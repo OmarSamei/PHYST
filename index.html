@@ -60,15 +60,13 @@
 
     .buttons {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       gap: 15px;
       justify-content: center;
       margin-bottom: 15px;
     }
 
     .download-btn {
-      flex: 1 1 45%;
-      min-width: 150px;
       background-color: #0c77f0;
       color: #ffffff;
       padding: 14px 20px;
@@ -77,6 +75,7 @@
       font-size: 18px;
       font-weight: bold;
       transition: 0.3s ease;
+      width: 100%;
     }
 
     .download-btn:hover {
@@ -84,10 +83,7 @@
     }
 
     .presentation-btn {
-      display: block;
-      width: 100%;
-      max-width: 400px;
-      margin: 0 auto 25px;
+      margin-top: 20px;
       background-color: #0c77f0;
       color: white;
       padding: 14px 20px;
@@ -96,6 +92,7 @@
       font-size: 18px;
       font-weight: bold;
       transition: 0.3s ease;
+      width: 100%;
     }
 
     .presentation-btn:hover {
@@ -118,7 +115,6 @@
       }
 
       .download-btn {
-        flex: 1 1 100%;
         font-size: 16px;
         padding: 12px;
       }
