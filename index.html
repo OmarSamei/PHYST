@@ -21,21 +21,22 @@
     .container {
       width: 95%;
       max-width: 900px;
-      padding: 20px;
-      margin: auto;
+      padding: 15px;
+      margin: 15px auto;
       background-color: rgba(0, 0, 0, 0.3);
       border-radius: 20px;
       box-shadow: 0 0 20px rgba(0,0,0,0.3);
     }
 
     .logo {
-      width: 120px;
-      margin-bottom: 15px;
+      width: 100px;
+      margin-bottom: 10px;
     }
 
     h1 {
-      font-size: 26px;
-      margin-bottom: 20px;
+      font-size: 24px;
+      margin-bottom: 15px;
+      line-height: 1.4;
     }
 
     .video-wrapper {
@@ -45,7 +46,7 @@
       overflow: hidden;
       border-radius: 15px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     .video-wrapper iframe {
@@ -61,22 +62,23 @@
     .buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 10px;
       justify-content: center;
       margin-bottom: 15px;
     }
 
     .download-btn {
-      flex: 1 1 45%;
-      min-width: 150px;
+      flex: 1 1 100%;
+      min-width: 140px;
       background-color: #0c77f0;
       color: #ffffff;
-      padding: 14px 20px;
+      padding: 12px 18px;
       border-radius: 30px;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: bold;
       transition: 0.3s ease;
+      text-align: center;
     }
 
     .download-btn:hover {
@@ -86,16 +88,17 @@
     .presentation-btn {
       display: block;
       width: 100%;
-      max-width: 400px;
-      margin: 15px auto 25px;
+      max-width: 300px;
+      margin: 10px auto 20px;
       background-color: #0c77f0;
       color: white;
-      padding: 14px 20px;
+      padding: 12px 18px;
       border-radius: 30px;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: bold;
       transition: 0.3s ease;
+      text-align: center;
     }
 
     .presentation-btn:hover {
@@ -103,33 +106,78 @@
     }
 
     footer {
-      font-size: 16px;
-      line-height: 1.8;
-      margin-top: 30px;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-top: 20px;
     }
 
-    @media (max-width: 600px) {
+    footer a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    footer a:hover {
+      color: #d50000;
+    }
+
+    /* Media Queries for Mobile Optimization */
+    @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+        margin: 10px;
+      }
+
       h1 {
-        font-size: 22px;
+        font-size: 20px;
       }
 
       .logo {
-        width: 100px;
+        width: 80px;
       }
 
       .download-btn {
-        flex: 1 1 100%;
-        font-size: 16px;
-        padding: 12px;
+        font-size: 14px;
+        padding: 10px 15px;
       }
 
       .presentation-btn {
-        font-size: 16px;
-        padding: 12px;
+        font-size: 14px;
+        padding: 10px 15px;
+        max-width: 280px;
       }
 
       footer {
-        font-size: 14px;
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 18px;
+      }
+
+      .logo {
+        width: 70px;
+      }
+
+      .download-btn {
+        font-size: 13px;
+        padding: 8px 12px;
+      }
+
+      .presentation-btn {
+        font-size: 13px;
+        padding: 8px 12px;
+        max-width: 250px;
+      }
+
+      footer {
+        font-size: 11px;
+        line-height: 1.5;
+      }
+
+      .video-wrapper {
+        margin-bottom: 10px;
       }
     }
   </style>
