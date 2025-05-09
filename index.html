@@ -6,23 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
-    html, body {
+    body {
       margin: 0;
       padding: 0;
-      height: 100%;
       font-family: 'Cairo', 'Arial', sans-serif;
-      background: linear-gradient(135deg, #005c97 0%, #b1d4e0 100%);
+      background: linear-gradient(135deg, #005c97, #00416a);
       color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      overflow-x: hidden;
     }
 
     .container {
       width: 100%;
       max-width: 1100px;
-      padding: 30px 15px;
-      margin: 0 auto;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.35);
+      border-radius: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
       animation: fadeIn 1s ease-out;
+      box-sizing: border-box;
     }
 
     @keyframes fadeIn {
@@ -77,13 +82,12 @@
       margin-bottom: 25px;
     }
 
-    .download-btn {
+    .download-btn,
+    .presentation-btn {
       flex: 1 1 48%;
       min-width: 150px;
       max-width: 48%;
       min-height: 40px;
-      background: linear-gradient(45deg, #0c77f0, #4facfe);
-      color: #ffffff;
       padding: 12px 16px;
       border-radius: 50px;
       text-decoration: none;
@@ -100,8 +104,25 @@
       gap: 8px;
     }
 
+    .download-btn {
+      background: linear-gradient(45deg, #0c77f0, #4facfe);
+      color: #ffffff;
+    }
+
     .download-btn:hover, .download-btn:active {
       background: linear-gradient(45deg, #d50000, #ff6b6b);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .presentation-btn {
+      background: linear-gradient(45deg, #28a745, #51cf66);
+      color: white;
+      margin: 10px auto 0;
+    }
+
+    .presentation-btn:hover, .presentation-btn:active {
+      background: linear-gradient(45deg, #218838, #38b353);
       transform: translateY(-2px);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     }
@@ -121,40 +142,12 @@
     }
 
     .download-btn:hover::before,
-    .presentation-btn:hover::before {
+    .download-btn:active::before,
+    .presentation-btn:hover::before,
+    .presentation-btn:active::before {
       opacity: 1;
       width: 0;
       height: 0;
-    }
-
-    .presentation-btn {
-      flex: 1 1 48%;
-      min-width: 150px;
-      max-width: 48%;
-      min-height: 40px;
-      background: linear-gradient(45deg, #28a745, #51cf66);
-      color: white;
-      padding: 12px 16px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin: 10px auto 0;
-    }
-
-    .presentation-btn:hover, .presentation-btn:active {
-      background: linear-gradient(45deg, #218838, #38b353);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     }
 
     .fa-icon {
@@ -187,6 +180,7 @@
     @media (max-width: 768px) {
       .container {
         padding: 15px;
+        width: 95%;
       }
 
       h1 {
@@ -205,12 +199,11 @@
 
       .download-btn,
       .presentation-btn {
-        min-width: 100%;
+        flex: 1 1 100%;
         max-width: 100%;
         font-size: 15px;
         padding: 10px 14px;
         min-height: 36px;
-        margin: 0;
       }
 
       .video-wrapper {
@@ -231,7 +224,7 @@
     @media (max-width: 480px) {
       .container {
         padding: 8px;
-        margin: 5px;
+        border-radius: 15px;
       }
 
       h1 {
@@ -241,11 +234,6 @@
 
       .logo {
         width: 70px;
-        margin-bottom: 12px;
-      }
-
-      .buttons {
-        gap: 6px;
       }
 
       .download-btn,
@@ -277,7 +265,9 @@
   <div class="container">
     <img src="logo.png" alt="لوجو كلية العلاج الطبيعي" class="logo">
 
-    <h1>Practical application for active assisted ROM lower limb</h1>
+    <h1>
+      Practical application for active assisted ROM lower limb
+    </h1>
 
     <div class="video-wrapper">
       <iframe src="https://www.youtube.com/embed/Cx0koPBs_vI" allowfullscreen></iframe>
